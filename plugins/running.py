@@ -45,8 +45,8 @@ async def run(bot, message):
                 caption=Translation.CAPTION.format(file_name),
                 message_id=message.message_id
             )
-            files_count += 10
-            await asyncio.sleep(5)
+            files_count += 100
+            await asyncio.sleep()
         except FloodWait as e:
             await asyncio.sleep(e.x)
             await bot.copy_message(
@@ -56,8 +56,8 @@ async def run(bot, message):
                 caption=Translation.CAPTION.format(file_name),
                 message_id=message.message_id
             )
-            files_count += 10
-            await asyncio.sleep(5)
+            files_count += 100
+            await asyncio.sleep()
         except Exception as e:
             print(e)
             pass
